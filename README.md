@@ -66,7 +66,7 @@ Run all subsequent cells sequentially to generate the graphs, analysis metrics, 
 
 ## 🧠 Approach & Methodology
 
-### 1. Data Collection & Graph Construction
+### 1. Data Collection & Graph Construction (completed)
 - Curated datasets for **Countries** and **Cities**.
 - Built three distinct directed graphs:
   1. **Country Only**: Nodes = Countries.
@@ -74,20 +74,20 @@ Run all subsequent cells sequentially to generate the graphs, analysis metrics, 
   3. **Combined**: Merged graph of countries and cities.
 - **Edge Logic**: A directed edge exists from $U \to V$ if `U[-1] == V[0]`.
 
-### 2. Graph Analysis (Task 1)
+### 2. Graph Analysis (Task 1) (completed)
 Used graph theory concepts to find strategic advantages:
 - **Centrality Measures**: Calculated Degree, Closeness, and Betweenness centrality to find "Hub" nodes (safe starts) vs. "Trap" nodes.
 - **Topological Metrics**: Analyzed Density and Diameter to understand game length and complexity.
 - **Winning Strategy**: Identified "Sink" nodes or letters (like 'X' or 'Q') that act as dead ends, forcing an opponent to lose.
 
-### 3. Community Detection (Task 2)
+### 3. Community Detection (Task 2) (completed)
 Applied clustering algorithms to find hidden structures in the Country graph:
 - **Algorithms**: Implemented **Greedy Modularity** and **Louvain Community Detection**.
 - **Insight**: Communities formed based on phonetic patterns (start/end letters) rather than geographical proximity.
 - **Evaluation**: Validated quality using the Modularity Score.
 
 ### 4. Link Prediction (Bonus Task) (Didn't complete)
-
+Did not attempt the bonus link prediction task (Node2Vec / GNN) due to time and compute constraints; priority was given to deeper exploratory analysis and interpretation of core tasks.
 
 
 
