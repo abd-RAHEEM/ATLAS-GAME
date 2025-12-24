@@ -18,9 +18,18 @@ The goal is to analyze the game's complexity, mathematically determine "winning"
 
 The repository is structured as follows:
 
-├── ATLAS-1.ipynb # Main Jupyter/Colab notebook containing all code (Extraction, Analysis, GNNs)
+├── ATLAS_GAME.ipynb # Main Jupyter/Colab notebook containing all code (Extraction, Visualisation, Analysis)
+
+├── Project REPORT ATLAS GAME.pdf # Report documenting the project
+
 ├── cities.csv # Cleaned dataset of major world cities
+
+├── cities_cleaned.csv #Generated after data cleaning
+
 ├── countries.csv # Cleaned dataset of officially recognized countries
+
+├── countries_cleaned.csv #Generated after data cleaning
+
 └── README.md # Project documentation
 
 
@@ -32,7 +41,6 @@ The code requires a Python environment. The following major libraries are used:
 - **PyTorch & PyTorch Geometric (PyG)**: For the Link Prediction bonus task (GNNs).
 - **Pandas**: For data manipulation and reading CSVs.
 - **Matplotlib & Seaborn**: For plotting graphs and heatmaps.
-- **Node2Vec**: For generating random-walk based node embeddings.
 
 *Note: The first cell of the notebook automatically installs all required dependencies.*
 
@@ -51,7 +59,7 @@ Ensure the two dataset files are available in the runtime environment:
 **For Google Colab:** Upload these two files to the root "Files" section in the sidebar before running the code.
 
 ### Step 3: Install Dependencies
-Run the **first cell** of the notebook. It contains the commands (`!pip install ...`) to download and set up the necessary environment libraries.
+Run the **first cell** of the notebook. It contains the commands to download and set up the necessary environment libraries.
 
 ### Step 4: Execute Analysis
 Run all subsequent cells sequentially to generate the graphs, analysis metrics, and GNN training results.
@@ -78,17 +86,10 @@ Applied clustering algorithms to find hidden structures in the Country graph:
 - **Insight**: Communities formed based on phonetic patterns (start/end letters) rather than geographical proximity.
 - **Evaluation**: Validated quality using the Modularity Score.
 
-### 4. Link Prediction (Bonus Task)
-Trained a Neural Network to predict valid game moves:
-- **Embeddings**: Generated **Node2Vec** embeddings to capture structural similarity.
-- **Architecture**: Built a **Graph Neural Network (GNN)** using PyTorch Geometric to predict edge existence.
-- **Training**: Unsupervised training using negative sampling to distinguish real moves from invalid ones.
+### 4. Link Prediction (Bonus Task) (Didn't complete)
 
-## 📊 Results Snapshot
 
-- **Strategic Insight**: Countries ending in **'A'** act as major hubs, offering the most next-move possibilities.
-- **Traps**: Forcing the game into names ending with rare letters (e.g., 'X') is a statistically dominant strategy.
-- **GNN Performance**: The link prediction model successfully learned the "Last Letter = First Letter" rule from graph structure alone.
+
 
 ---
 *Developed for Precog Recruitment Task 2025 by [Abd Raheem](https://github.com/abd-RAHEEM)*
