@@ -14,6 +14,8 @@ This project models the game as a **Directed Graph** where:
 
 The goal is to analyze the game's complexity, mathematically determine "winning" strategies using centrality measures, and perform link prediction using Graph Neural Networks.
 
+**Paper Reading Task**: Presentation Link: https://drive.google.com/file/d/1pxSRa_YnIbtVWhnKWI7xNUKG1M7wKGOV/view?usp=drive_link
+
 ## 📂 Directory Structure
 
 The repository is structured as follows:
@@ -86,8 +88,12 @@ Applied clustering algorithms to find hidden structures in the Country graph:
 - **Insight**: Communities formed based on phonetic patterns (start/end letters) rather than geographical proximity.
 - **Evaluation**: Validated quality using the Modularity Score.
 
-### 4. Link Prediction (Bonus Task) (Didn't complete)
-Did not attempt the bonus link prediction task (Node2Vec / GNN) due to time and compute constraints; priority was given to deeper exploratory analysis and interpretation of core tasks.
+### 4. Link Prediction (Task 3 Bonus) (completed)
+Implemented neural networks to predict valid moves (edges) between countries:
+- **Models**: Built and compared **Node2Vec** (shallow embeddings) and **Graph Convolutional Networks (GCN)** using PyTorch Geometric.
+- **Features**: Engineered **52-dimensional one-hot vectors** capturing the first and last letters to represent the "physics" of the game.
+- **Objective**: Conducted **unsupervised training** via edge masking and negative sampling to teach the model the rules of Atlas.
+- **Evaluation**: Validated performance using **AUC (Area Under Curve)** and **Average Precision**, proving the GNN can successfully predict valid moves it hasn't seen before.
 
 
 
