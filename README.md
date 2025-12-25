@@ -43,6 +43,7 @@ The code requires a Python environment. The following major libraries are used:
 - **PyTorch & PyTorch Geometric (PyG)**: For the Link Prediction bonus task (GNNs).
 - **Pandas**: For data manipulation and reading CSVs.
 - **Matplotlib & Seaborn**: For plotting graphs and heatmaps.
+- PyTorch, PyTorch Geometric (link prediction and GNN models), scikit‑learn (ROC‑AUC/AP metrics).
 
 *Note: The first cell of the notebook automatically installs all required dependencies.*
 
