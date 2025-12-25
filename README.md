@@ -98,4 +98,4 @@ Implemented neural networks to predict valid moves (edges) between countries:
 
 
 ---
-*Developed for Precog Recruitment Task 2025 by [Abd Raheem](https://github.com/abd-RAHEEM)*
+*Developed  by [Abd Raheem](https://github.com/abd-RAHEEM)*
